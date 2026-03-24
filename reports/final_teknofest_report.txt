@@ -1,0 +1,38 @@
+
+============================================================
+   TEKNOFEST KANSER TESPITI - HIBHRID ENSEMBLE RAPORU
+============================================================
+
+1. MODEL ARCHITECTURE
+   Algoritma: XGBoost + LightGBM (Hybrid Soft Voting)
+   XGBoost N_Est: 300
+   LightGBM N_Est: 300
+   Weight: 0.5 XGB / 0.5 LGBM
+   Calibration: Isotonic Regression
+
+2. PERFORMANCE (TEST SET)
+   Best Threshold: 0.74
+   Dogruluk (Accuracy): %99.20
+   F1-Score: 0.9921
+   Hassasiyet (Precision): 0.9908
+   Duyarlilik (Recall): 0.9933
+   ROC-AUC Skoru: 0.9992
+   PR-AUC Skoru: 0.9990
+
+3. CONFUSION MATRIX BILGISI
+   Gercek Benign -> Tahmin Benign: 9461
+   Gercek Benign -> Tahmin Pathogenic: 88
+   Gercek Pathogenic -> Tahmin Benign: 64
+   Gercek Pathogenic -> Tahmin Pathogenic: 9485
+
+4. CLASSIFICATION REPORT
+              precision    recall  f1-score   support
+
+      Benign       0.99      0.99      0.99      9549
+  Pathogenic       0.99      0.99      0.99      9549
+
+    accuracy                           0.99     19098
+   macro avg       0.99      0.99      0.99     19098
+weighted avg       0.99      0.99      0.99     19098
+
+============================================================
